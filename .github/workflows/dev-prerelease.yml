@@ -1,0 +1,26 @@
+name: Dev to Prerelease CI
+
+on:
+  pull_request:
+    branches:
+      - prerelease
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Get repository
+        uses: actions/checkout@v4
+
+      - name: Run unit tests
+        shell: cmd
+        run: python tests.py
+
+      - name: Run integration tests
+        shell: cmd
+        run: python integration-tests.py
+
+      - name: Run calculator
+        shell: cmd
+        run: python calculator.py

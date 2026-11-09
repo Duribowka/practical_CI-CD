@@ -1,4 +1,4 @@
-from main import addition, subtraction, multiplication, division
+from calculator import addition, subtraction, multiplication, division
 
 
 def test():
