@@ -19,4 +19,4 @@ jobs:
 
       - name: Run integration tests
         shell: cmd
-        run: python integration_tests.py
+        run: python integration-tests.py
