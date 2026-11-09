@@ -21,3 +21,5 @@ if __name__ == "__main__":
     print("Subtraction:", subtraction(a, b))
     print("Multiplication:", multiplication(a, b))
     print("Division:", division(a, b))
+
+    #calculator ahahahah
