@@ -27,7 +27,7 @@ jobs:
 
       - name: Automatic regression test
         shell: cmd
-        run: python tests.py
+        run: python regression-tests.py
 
       - name: Manual testing required
         shell: cmd
