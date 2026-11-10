@@ -1,0 +1,21 @@
+name: Main CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Update production
+        shell: cmd
+        run: |
+          git -C "C:\Users\sboro\Desktop\Practical_task_CI-CD\Main\practical_CI-CD" fetch origin
+          git -C "C:\Users\sboro\Desktop\Practical_task_CI-CD\Main\practical_CI-CD" reset --hard origin/main
+
+      - name: Run calculator
+        shell: cmd
+        run: python "C:\Users\sboro\Desktop\Practical_task_CI-CD\Main\practical_CI-CD\calculator.py"
